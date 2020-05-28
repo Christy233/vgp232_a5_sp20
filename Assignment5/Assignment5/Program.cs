@@ -10,6 +10,18 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
+            List<Item> items = new List<Item>();
+            items.Add(new Item("apple", 1, 0));
+            items.Add(new Item("apple2", 1, 0));
+            items.Add(new Item("apple3", 1, 0));
+            items.Add(new Item("apple4", 1, 0));
+            items.Add(new Item("apple5", 1, 0));
+            items.Remove(new Item("apple", 1, 0));
+            foreach (Item item in items)
+            {
+                Console.WriteLine(items);
+            }
+
 
             // TODO: initialize the inventory
             // Add a few items
