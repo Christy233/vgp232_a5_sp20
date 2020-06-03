@@ -20,7 +20,7 @@ namespace Assignment5
         {
             items.Add(item);
             // TODO: add implementation.
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void Remove(Item item)
@@ -28,17 +28,17 @@ namespace Assignment5
             items.Remove(item);
             // TODO: add implementation.
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void ShowInventory()
         {
             // TODO: add implementation.
-            for (int i = 0; i < items.Count; ++i)
+            foreach (var item in items)
             {
-                Console.WriteLine("");
+                Console.WriteLine($"Name: {item.Name}, Modifier: {item.Modifier}, Type: {item.IType}");
             }
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

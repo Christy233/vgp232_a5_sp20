@@ -10,17 +10,21 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
-            List<Item> items = new List<Item>();
-            items.Add(new Item("apple", 1, 0));
-            items.Add(new Item("apple2", 1, 0));
-            items.Add(new Item("apple3", 1, 0));
-            items.Add(new Item("apple4", 1, 0));
-            items.Add(new Item("apple5", 1, 0));
-            items.Remove(new Item("apple", 1, 0));
-            foreach (Item item in items)
-            {
-                Console.WriteLine(items);
-            }
+            Inventory inventory = new Inventory(10);
+            Item apple = new Item("apple", 1, ItemType.consumable);
+            Item apple2 = new Item("apple2", 1, ItemType.consumable);
+            Item apple3 = new Item("apple3", 1, ItemType.consumable);
+            Item apple4 = new Item("apple4", 1, ItemType.consumable);
+
+            inventory.Add(apple);
+            inventory.Add(apple2);
+            inventory.Add(apple3);
+            inventory.Add(apple4);
+
+            inventory.Remove(apple);
+            inventory.ShowInventory();
+
+
 
 
             // TODO: initialize the inventory
